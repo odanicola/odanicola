@@ -18,5 +18,5 @@ Route::get('portfolio/detail/{id}', 'PortfolioController@detail')->name('portfol
 
 Auth::routes();
 Route::group(['middleware' => ['auth']], function () {
-    
+    Route::get('admin/dashboard', 'DashboardController@index')->name('dashboard.index');
 });

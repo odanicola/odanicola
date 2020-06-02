@@ -24,7 +24,7 @@
                                 <div class="portfolio-item-caption-content text-center text-white "><i class="fas fa-eye fa-3x"></i></div>
                             </div>
                             
-                            <img class="image-card img-fluid" src="<?php echo asset('img/portfolios/' . $value->feature_image) ?>" alt="{{ $value->title }}" />
+                            <img class="image-card img-fluid" src="{{ $value->feature_image }}" alt="{{ $value->title }}" />
                         </div>
                         </a>
                         

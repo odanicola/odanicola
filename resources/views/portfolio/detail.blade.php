@@ -23,17 +23,21 @@
                         <!-- Description -->
                         <h5 class="card-title">Description</h5>
                         <p class="card-text mt-2">{{ $portfolio->description }}{{ $portfolio->description }}</p>
-                        
                         <!-- Gallery -->
                         <h5 class="card-title">Gallery</h5>
-                        
+
                         <!--Carousel Wrapper-->
+                        @if(count($portfolio->gallery) > 0)
+                        
                         @foreach($portfolio->gallery as $key => $value)
-                            <a href="<?php echo asset('img/gallery/' . $value->url) ?>" rel="prettyPhoto" title="{{ $portfolio->title }}">
-                                <img class="img-fluid" src="<?php echo asset('img/gallery/' . $value->url) ?>" alt="{{ $portfolio->title }}">    
+                            <a href="{{ $value->url }}" rel="prettyPhoto" title="{{ $portfolio->title }}">
+                                <img class="img-fluid" src="{{ $value->url }}" alt="{{ $portfolio->title }}">    
                             </a>
                             
                         @endforeach
+                        @else 
+                        <p>Tidak ada galeri.</p>
+                        @endif
                         <!--/.Carousel Wrapper-->
 
                         <!-- Description -->

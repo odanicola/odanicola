@@ -62,8 +62,8 @@
             
             <!-- About Section Content-->
             <div class="row">
-                <div class="col-lg-4 ml-auto"><p class="lead">I'm a full stack developer with a focus on web development and mobile development especially hybrid mobile app. I'm hardworking, fast-learning, and dedicated for all qualities i put forward in everything i do.</p></div>
-                <div class="col-lg-4 mr-auto"><p class="lead">Prefer to work in Bandung and with English environment to build my self up becoming a professional web development guy.</p></div>
+                <div class="col-lg-4 ml-auto"><p class="lead">I'm a full stack developer with a focus on web development and mobile development especially hybrid mobile app. I'm hardworker, fast-leaner, and dedicated for all qualities i put forward in every project.</p></div>
+                <div class="col-lg-4 mr-auto"><p class="lead">Prefer to work in Bandung and with English environment to build my self becoming a professional web development guy.</p></div>
             </div>
             <!-- About Section Button-->
             <div class="text-center mt-4">

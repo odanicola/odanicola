@@ -17,6 +17,7 @@ Route::get('downloadresume', 'HomeController@getDownloadResume')->name('home.dow
 Route::get('portfolio/detail/{id}', 'PortfolioController@detail')->name('portfolio.detail');
 
 Auth::routes();
+
 Route::group(['middleware' => ['auth']], function () {
     Route::get('admin/dashboard', 'DashboardController@index')->name('dashboard.index');
 });

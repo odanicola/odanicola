@@ -138,9 +138,11 @@
                   <span>Support</span>
                 </a>
                 <div class="dropdown-divider"></div>
-                <a href="{{ Auth::logout() }}" class="dropdown-item">
-                  <i class="ni ni-user-run"></i>
-                  <span>Logout</span>
+                <a href="{{ route('logout') }}" class="dropdown-item"
+                onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Keluar</a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                    @csrf
+                </form>
                 </a>
               </div>
             </li>
@@ -172,14 +174,7 @@
     <div class="container-fluid mt--6">
         <div class="row justify-content-center">
             <div class=" col ">
-                <div class="card">
-                    <div class="card-header bg-transparent">
-                        <h3 class="mb-0">Aplikasi</h3>
-                    </div>
-                    <div class="card-body">
-                        <p>Belum ada.</p>
-                    </div>
-                </div>
+                <!-- @yield('content') -->
             </div>
         </div>
     </div>

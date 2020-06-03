@@ -10,7 +10,19 @@ class PortfolioController extends Controller
     public function detail(Request $request, $id)
     {
         $portfolio = MBrandPortFolio::with('gallery')->where('id', $id)->first();
-        // dd($portfolio);
+        
         return view('portfolio.detail', compact('portfolio'));
+    }
+
+
+    /**
+     * Admin Controllers
+     */
+
+    public function adminList(Request $request)
+    {
+        $data = array();
+        $data['title'] = "Portfolio";
+        return view('admin.portfolio.index', compact('data'));
     }
 }

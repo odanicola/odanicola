@@ -32,6 +32,7 @@
   <!-- Page plugins -->
   <!-- Argon CSS -->
   <link rel="stylesheet" href="{{ asset('admin/css/argon.css?v=1.2.0') }}" type="text/css">
+  <script src="{{ asset('admin/vendor/jquery/dist/jquery.min.js') }}"></script>
 </head>
 
 <body>
@@ -60,7 +61,7 @@
                     <i class="ni ni-app text-primary"></i>Brand Profile
                 </a>
                 <div class="dropdown-menu ml-3 mr-3" aria-labelledby="navbarBrandProfile">
-                <a class="dropdown-item" href="#"><i class="ni ni-settings-gear-65 text-primary"></i> Porfolios</a>
+                <a class="dropdown-item" href="{{ route('portfolio.admin.list') }}"><i class="ni ni-settings-gear-65 text-primary"></i> Porfolios</a>
                 <a class="dropdown-item" href="#"><i class="ni ni-settings-gear-65 text-primary"></i> Team</a>
                 <a class="dropdown-item" href="#"><i class="ni ni-settings-gear-65 text-primary"></i> Technology</a>
                 </div>
@@ -157,12 +158,12 @@
         <div class="header-body">
           <div class="row align-items-center py-4">
             <div class="col-lg-6 col-7">
-              <h6 class="h2 text-white d-inline-block mb-0">Home</h6>
+              <h6 class="h2 text-white d-inline-block mb-0" id="adminHeaderPage">Home</h6>
               <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                 <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                   <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
                   <li class="breadcrumb-item"><a href="#">Dashboards</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Home</li>
+                  <li class="breadcrumb-item active" aria-current="page" id="adminPage">Home</li>
                 </ol>
               </nav>
             </div>
@@ -174,14 +175,14 @@
     <div class="container-fluid mt--6">
         <div class="row justify-content-center">
             <div class=" col ">
-                <!-- @yield('content') -->
+                @yield('content')
             </div>
         </div>
     </div>
   </div>
   <!-- Argon Scripts -->
   <!-- Core -->
-  <script src="{{ asset('admin/vendor/jquery/dist/jquery.min.js') }}"></script>
+  
   <script src="{{ asset('admin/vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
   <script src="{{ asset('admin/vendor/js-cookie/js.cookie.js') }}"></script>
   <script src="{{ asset('admin/vendor/jquery.scrollbar/jquery.scrollbar.min.js') }}"></script>

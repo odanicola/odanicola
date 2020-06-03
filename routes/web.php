@@ -20,4 +20,7 @@ Auth::routes();
 
 Route::group(['middleware' => ['auth']], function () {
     Route::get('admin/dashboard', 'DashboardController@index')->name('dashboard.index');
+    
+    // Brand -> Portfolio
+    Route::get('admin/portfolio', 'PortfolioController@adminList')->name('portfolio.admin.list');
 });

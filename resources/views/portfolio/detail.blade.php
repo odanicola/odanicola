@@ -41,14 +41,14 @@
                         <!--/.Carousel Wrapper-->
 
                         <!-- Description -->
-                        <h5 class="card-title">Technology</h5>
+                        <!-- <h5 class="card-title">Technology</h5>
                         <div class="row">
                             <div class="col-md-12">
                                 <ul class="">
                                     <li>Codeigniter 2.0</li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>

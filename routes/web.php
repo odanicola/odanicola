@@ -23,4 +23,5 @@ Route::group(['middleware' => ['auth']], function () {
     
     // Brand -> Portfolio
     Route::get('admin/portfolio', 'PortfolioController@adminList')->name('portfolio.admin.list');
+    Route::get('admin/portfolio/edit/{id}', 'PortfolioController@adminEdit')->name('portfolio.admin.edit');
 });

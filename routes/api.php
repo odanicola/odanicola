@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::post('finpay/callback', 'FinpayController@callback')->name('finpay.callback');
+Route::post('finpay/authentication', 'FinpayController@authentication')->name('finpay.authentication');

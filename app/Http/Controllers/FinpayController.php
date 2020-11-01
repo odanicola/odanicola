@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use App\FinpayTrx;
 
 class FinpayController extends Controller
 {
     public function callback(Request $request)
     {
         $data = $request->all();
+        $model = FinpayTrx::create($data);
         echo json_encode($data);
         die();
     }
@@ -22,7 +24,10 @@ class FinpayController extends Controller
         $data['mer_signature'] = $signature['result'];
         $url = "https://sandbox.finpay.co.id/servicescode/api/pageFinpay.php";
         $response = Http::post($url, $data);
-        return $response->json();
+        $result['result'] = $response->json();
+        $result['signature'] = $signature['result'];
+        echo json_encode($result);
+        die();
     }
 
     private function createSignature($data,$pass){

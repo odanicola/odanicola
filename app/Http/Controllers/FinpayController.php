@@ -13,4 +13,16 @@ class FinpayController extends Controller
         echo json_encode($data);
         die();
     }
+
+    public function success()
+    {
+        echo 'success';
+        die();
+    }
+
+    public function failed()
+    {
+        echo 'failed';
+        die();
+    }
 }

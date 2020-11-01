@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@index')->name('home.index');
 Route::get('downloadresume', 'HomeController@getDownloadResume')->name('home.download');
 Route::get('portfolio/detail/{id}', 'PortfolioController@detail')->name('portfolio.detail');
+Route::get('finpay/success', 'FinpayController@success')->name('finpay.success');
+Route::get('finpay/failed', 'FinpayController@failed')->name('finpay.failed');
 
 Auth::routes();
 

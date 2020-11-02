@@ -19,7 +19,7 @@ class FinpayController extends Controller
     public function authentication(Request $request)
     {
         $data = $request->all();
-        $pass = "WB53gy04";
+        $pass = "ZORA2016";
         $signature = self::createSignature($data,$pass);
         $data['mer_signature'] = $signature['result'];
         $url = "https://sandbox.finpay.co.id/servicescode/api/pageFinpay.php";

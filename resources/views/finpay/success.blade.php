@@ -47,7 +47,8 @@
                         </div>
                         <h1>Pembayaran Berhasil</h1> 
                         <p>Terimakasih atas pembayaran Anda</p>
-                        <a href="intent://faskes/riwayat/detail/19/#Intent;scheme=idinfokesmobile;package=id.infokes.mobile;end">Infokes Mobile 2.0</a>
+                        {{-- <a href="intent://faskes/riwayat/detail/19/#Intent;scheme=idinfokesmobile;package=id.infokes.mobile;end">Infokes Mobile 2.0</a> --}}
+                        <a href="idinfokesmobile://faskes/riwayat/detail/19">Infokes Mobile 2.0</a>
                     </div>
                 </div>
             </div>

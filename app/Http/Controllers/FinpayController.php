@@ -59,8 +59,7 @@ class FinpayController extends Controller
 
     public function success()
     {
-        echo 'success';
-        die();
+        return view('finpay/success');
     }
 
     public function failed()
